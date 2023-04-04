@@ -8,6 +8,7 @@ from sklearn.metrics import accuracy_score
 
 # Data collection and Preprocessing
 
+
 # loading the dataset from sklearn
 breastCancerDataset = sklearn.datasets.load_breast_cancer()
 
@@ -19,7 +20,7 @@ dataFrame = pd.DataFrame(breastCancerDataset.data,
 dataFrame['label'] = breastCancerDataset.target
 
 # exporting the dataset as a csv file
-# csvData = dataFrame.to_csv('../dataset/breastCancer.csv')
+csvData = dataFrame.to_csv('../dataset/breastCancer.csv', index=False)
 
 # number of rows and columns in the dataset
 print("{}".format(dataFrame.shape))
